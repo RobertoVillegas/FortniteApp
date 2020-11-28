@@ -1,0 +1,7 @@
+{
+  "name": "FortniteApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
