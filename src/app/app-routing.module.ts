@@ -8,8 +8,24 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'inicio',
     pathMatch: 'full'
+  },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'casillero',
+    loadChildren: () => import('./pages/casillero/casillero.module').then( m => m.CasilleroPageModule)
+  },
+  {
+    path: 'deseos',
+    loadChildren: () => import('./pages/deseos/deseos.module').then( m => m.DeseosPageModule)
+  },
+  {
+    path: 'estadisticas',
+    loadChildren: () => import('./pages/estadisticas/estadisticas.module').then( m => m.EstadisticasPageModule)
   },
 ];
 
