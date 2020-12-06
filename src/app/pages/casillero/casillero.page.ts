@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FortniteApiService } from 'src/app/services/fortnite-api.service';
 
 @Component({
   selector: 'app-casillero',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CasilleroPage implements OnInit {
 
-  constructor() { }
+  resultados: Array<any>;
+  skins: any;
 
-  ngOnInit() {
+  busqueda = {
+    nombre: ''
+  };
+
+  constructor(private dataService: FortniteApiService) {}
+
+  ngOnInit() { }
+
+  async onSubmitTemplate() {
+    console.log('Form submit');
+    console.log(this.busqueda);
+    this.skins = await this.dataService.getSkins(this.busqueda);
+    // console.log(this.skins);
+    this.resultados = this.skins;
+    console.log(this.resultados);
+
   }
-
 }
+
