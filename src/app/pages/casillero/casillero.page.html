@@ -18,7 +18,7 @@
     <ion-button expand="full" type="submit">Enviar</ion-button>
   </form>
 
-  <ion-item-sliding *ngFor="let resultado of resultados">
+  <!-- <ion-item-sliding *ngFor="let resultado of resultados">
     <ion-item>
       <ion-label>
         <h3>{{ resultado.name }}</h3>
@@ -26,5 +26,16 @@
       </ion-label>
       <ion-label slot="end" text-right> {{ resultado.id }} </ion-label>
     </ion-item>
-  </ion-item-sliding>
+  </ion-item-sliding> -->
+
+  <ion-grid>
+    <ion-card *ngFor="let resultado of resultados">
+      <ion-img [src]="resultado.images.icon"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>{{ resultado.type.displayValue }}</ion-card-subtitle>
+        <ion-card-title>{{ resultado.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content> {{ resultado.description }}</ion-card-content>
+    </ion-card>
+  </ion-grid>
 </ion-content>
