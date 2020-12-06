@@ -14,6 +14,10 @@
   background-image: radial-gradient(#5bad03 0%, #01700a 100%);
 }
 
+.common {
+  background-image: radial-gradient(white 0%, gray 100%);
+}
+
 .dark {
   background-image: radial-gradient(#fb22df 0%, #520c6f 100%);
 }
@@ -44,4 +48,8 @@
 
 .starwars {
   background-image: radial-gradient(#1b366e 0%, #081737 100%);
+}
+
+.icon {
+  background-image: radial-gradient(#36b7b7 0%, #256b6b 100%);
 }

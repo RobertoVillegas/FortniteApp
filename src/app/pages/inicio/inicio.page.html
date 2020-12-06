@@ -22,8 +22,8 @@
 
   <ion-item *ngFor="let dailies of daily">
     <ion-thumbnail slot="start">
-      <img [src]="" />
+      <img [src]="dailies.item[0].images.icon" />
     </ion-thumbnail>
-    <ion-label> {{ dailies.items.name }} </ion-label>
+    <ion-label> {{ dailies.items[0].name }} </ion-label>
   </ion-item>
 </ion-content>
