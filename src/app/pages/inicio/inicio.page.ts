@@ -25,6 +25,8 @@ export class InicioPage implements OnInit {
     this.featured = this.tienda['featured']['entries'];
     this.specialFeatured = this.tienda['specialFeatured']['entries'];
 
+    console.log('items diarios');
+
     console.log(this.daily);
     console.log(this.featured);
     console.log(this.specialFeatured);
