@@ -18,12 +18,70 @@
     </ion-slide>
   </ion-slides>
 
-  <ion-item><ion-text>Separador</ion-text></ion-item>
+  <ion-item>
+    <ion-text>Separador</ion-text>
+  </ion-item>
 
-  <ion-item *ngFor="let dailies of daily">
+  <ion-item *ngFor="let entry of daily">
     <ion-thumbnail slot="start">
-      <img [src]="dailies.item[0].images.icon" />
+      <img
+        [src]="entry.items[0].images.icon"
+        [class]="entry.items[0].rarity.value"
+      />
     </ion-thumbnail>
-    <ion-label> {{ dailies.items[0].name }} </ion-label>
+    <ion-label>
+      <!-- {{ entry.items[0].name }} -->
+      <h1>{{ entry.items[0].name }}</h1>
+      <!-- <p>{{ entry.items[0].type.displayValue }}</p> -->
+      <p>
+        <img src="../../../assets/img/vbucks.png" alt="vbucks" width="12em" />
+        {{ entry.finalPrice }}
+      </p>
+    </ion-label>
+    <!-- <ion-label slot="end" text-right> {{ entry.finalPrice }} </ion-label> -->
+  </ion-item>
+
+  <ion-item>
+    <ion-text>Separador</ion-text>
+  </ion-item>
+
+  <ion-item *ngFor="let entry of featured">
+    <ion-thumbnail slot="start">
+      <img
+        [src]="entry.items[0].images.icon"
+        [class]="entry.items[0].rarity.value"
+      />
+    </ion-thumbnail>
+    <ion-label>
+      <!-- {{ entry.items[0].name }} -->
+      <h1>{{ entry.items[0].name }}</h1>
+      <!-- <p>{{ entry.items[0].type.displayValue }}</p> -->
+      <p>
+        <img src="../../../assets/img/vbucks.png" alt="vbucks" width="12em" />
+        {{ entry.finalPrice }}
+      </p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-text>Separador</ion-text>
+  </ion-item>
+
+  <ion-item *ngFor="let entry of specialFeatured">
+    <ion-thumbnail slot="start">
+      <img
+        [src]="entry.items[0].images.icon"
+        [class]="entry.items[0].rarity.value"
+      />
+    </ion-thumbnail>
+    <ion-label>
+      <!-- {{ entry.items[0].name }} -->
+      <h1>{{ entry.items[0].name }}</h1>
+      <!-- <p>{{ entry.items[0].type.displayValue }}</p> -->
+      <p>
+        <img src="../../../assets/img/vbucks.png" alt="vbucks" width="12em" />
+        {{ entry.finalPrice }}
+      </p>
+    </ion-label>
   </ion-item>
 </ion-content>

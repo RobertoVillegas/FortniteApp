@@ -35,7 +35,6 @@ export class InicioPage implements OnInit {
     this.noticias = this.obj['motds'];
 
     console.log(this.noticias);
-
   }
 
   //
