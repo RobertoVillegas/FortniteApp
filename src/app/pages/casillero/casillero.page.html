@@ -28,14 +28,18 @@
     </ion-item>
   </ion-item-sliding> -->
 
-  <ion-grid>
-    <ion-card *ngFor="let resultado of resultados">
-      <ion-img [src]="resultado.images.icon"></ion-img>
-      <ion-card-header>
-        <ion-card-subtitle>{{ resultado.type.displayValue }}</ion-card-subtitle>
-        <ion-card-title>{{ resultado.name }}</ion-card-title>
-      </ion-card-header>
-      <ion-card-content> {{ resultado.description }}</ion-card-content>
-    </ion-card>
+  <ion-grid size="6">
+    <ion-row>
+      <ion-col>
+        <ion-card *ngFor="let resultado of resultados">
+          <ion-img [src]="resultado.images.icon"></ion-img>
+          <ion-card-header>
+            <ion-card-subtitle>{{ resultado.type.displayValue }}</ion-card-subtitle>
+            <ion-card-title>{{ resultado.name }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content> {{ resultado.description }}</ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
   </ion-grid>
 </ion-content>
